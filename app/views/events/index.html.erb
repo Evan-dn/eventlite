@@ -1,6 +1,8 @@
-<h1>liste events</h1>
-<%@events.each do |event|%>
-    <h2><%= event.title %></h2>
-    <p><%= event.location %></p>
-    <p><%= event.datetime %></p>
-<%end %>
+<%= javascript_pack_tag 'eventlite' %>
+
+
+
+<%= content_tag :div,
+    id: "events_data",
+    data: @events.to_json do %>
+<% end %>
